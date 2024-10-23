@@ -1,0 +1,7 @@
+function nextQuestion(){
+
+}
+
+function chooseAnswer(){
+
+}
