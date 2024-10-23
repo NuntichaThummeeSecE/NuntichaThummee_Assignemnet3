@@ -1,5 +1,5 @@
 //create set of data (questions, choices and answer) in array//
-const QUESTIONS = [
+export const QUESTIONS = [
     {
         question: "What is the name of the main character, the concierge of the Grand Budapest Hotel?",
         choices: ["Gustave H", "Zero Moustafa", "Dmitri", "Jopling"],
@@ -7,6 +7,7 @@ const QUESTIONS = [
     },
     {
         question: "Who plays the role of Gustave H. in the film?",
+        
         choices: ["Bill Murray", "Adrien Brody", "Ralph Fiennes", "Willem Dafoe"],
         answer: 2,
     },
