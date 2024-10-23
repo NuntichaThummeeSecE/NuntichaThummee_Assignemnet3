@@ -67,6 +67,7 @@ const start = () => {
 }
 
 const showQuestion = () => {
+    reset();
     let currentQuestion = questions[currentQuestionIndex];
     questionElement.textContent = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
 
@@ -78,5 +79,16 @@ const showQuestion = () => {
         answerButton.appendChild(button);
     });
 }
+
+
+const reset = () => {
+    nextButton.style.display = "none";
+    while(answerButton.firstChild){
+        answerButton.removeChild(answerButton.firstChild);
+    }
+}
+
+
+
 
 start();
