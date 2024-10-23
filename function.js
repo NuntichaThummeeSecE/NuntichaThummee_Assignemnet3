@@ -1,7 +1,0 @@
-function nextQuestion(){
-
-}
-
-function chooseAnswer(){
-
-}

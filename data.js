@@ -1,5 +1,5 @@
 //create set of data (questions, choices and answer) in array//
-export const QUESTIONS = [
+export const questions = [
     {
         question: "What is the name of the main character, the concierge of the Grand Budapest Hotel?",
         choices: [
@@ -21,8 +21,8 @@ export const QUESTIONS = [
     {
         question: "What item is central to the plot and is sought after throughout the movie?",
         choices: [
-            { text: "A stolen necklace", correct: true  },
-            { text: "A priceless painting", correct: false},
+            { text: "A stolen necklace", correct: true },
+            { text: "A priceless painting", correct: false },
             { text: "A will", correct: false },
             { text: "A hotel key", correct: false },
         ]
@@ -31,7 +31,7 @@ export const QUESTIONS = [
         question: "Which fictional country is the Grand Budapest Hotel located in?",
         choices: [
             { text: "Eldoria", correct: false },
-            { text: "Frolinia", correct: false},
+            { text: "Frolinia", correct: false },
             { text: "Valoria", correct: true },
             { text: "Zubrowka", correct: false },
         ]
@@ -40,8 +40,8 @@ export const QUESTIONS = [
         question: "What type of establishment is the Grand Budapest Hotel?",
         choices: [
             { text: "A restaurant", correct: false },
-            { text: "A museum", correct: true},
-            { text:  "A hotel", correct: false },
+            { text: "A museum", correct: true },
+            { text: "A hotel", correct: false },
             { text: "A casino", correct: false },
         ]
     },
