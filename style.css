@@ -26,10 +26,38 @@ body {
     max-width: 913px;
     width: 100%;
     height: auto;
-    padding-top: 15%;
-    padding-bottom: 15%;
     margin-bottom: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+/* style choices container */
+#choices{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* style choices button */
+.choiceButton{
+    background-color: #96A7DB;
+    color: #FAD880; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    padding: 2%;
+    margin: 2%;
+}
+
+#nextButton{
+    background-color: #FAD880;
+    color:#96A7DB; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    padding: 2%;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin: 2%;
 }
