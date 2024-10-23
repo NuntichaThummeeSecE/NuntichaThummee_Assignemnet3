@@ -1,0 +1,7 @@
+/* add bg img */
+body {
+    background-image: url(The_Grand_Budapest_Hotel_bg.png);
+    background-size: cover;
+    background-position: top center;
+    background-color: black;
+}
