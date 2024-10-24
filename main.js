@@ -91,11 +91,12 @@ const reset = () => {
     }
 }
 
-function selectAnswer(e){
+const selectAnswer = (e) => {
     const selectedButton = e.target;
     const correctChoice = selectedButton.dataset.correct === "true" ;
     if(correctChoice){
         selectedButton.classList.add("correct");
+        score++;
     }else{
         selectedButton.classList.add("wrong")
     }
@@ -107,8 +108,16 @@ nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
         showQuestion();
+    }else{
+        scoreResult();
     }
 });
 
+
+const scoreResult = () => {
+    reset();
+    questionElement.innerHTML = `Your score is ${score} `; 
+    nextButton.style.display = "none";
+};
 
 start();
