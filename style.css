@@ -55,13 +55,14 @@ body {
     background-color: #96A7DB;
     color: #FAD880;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     padding: 2%;
     margin: 2%;
-    width: 80%;
+    width: 90%;
     font-family: "Inter", sans-serif;
-    font-weight: 200;
+    font-weight: 400;
+    font-size: 1.2em;
 }
 
 .choiceButton:hover{
@@ -172,3 +173,4 @@ label {
     background-color:#FAD880;
     color:#486EAD;
 }
+
