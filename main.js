@@ -99,9 +99,16 @@ function selectAnswer(e){
     }else{
         selectedButton.classList.add("wrong")
     }
+
+    nextButton.style.display = "block"; //show next button after choose the answer//
 }
 
-
+nextButton.addEventListener("click", () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    }
+});
 
 
 start();
