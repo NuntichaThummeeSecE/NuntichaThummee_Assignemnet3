@@ -32,10 +32,12 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 2%;
+    border-radius: 25px;
 }
 
 #question {
     margin: 5%;
+    margin-bottom: 2%;
     margin-top: 2%;
 }
 
@@ -45,6 +47,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
 }
 
 /* style choices button */
@@ -64,6 +67,12 @@ body {
 .choiceButton:hover{
     background-color: #FAD880;
     color: #96A7DB;
+}
+
+.choiceButton:active{
+    transform: scale(1.2);
+    background-color:#486EAD;
+    color:#FAD880;
 }
 
 #nextButton,
@@ -87,7 +96,7 @@ body {
 /* style color when click on correct answer */
 .correct {
     background-color: #A8FFBB;
-    color: white;
+    color: black;
 }
 
 /* style color when click on wrong answer */
@@ -141,3 +150,25 @@ label {
     color:#486EAD;
 }
 
+#nextButton{
+    max-width: 80px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 2px 4px 0 #aa9560;
+    transition: transform 0.2s;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#nextButton:hover{
+    background-color: #486EAD;
+    color: #FAD880;
+    box-shadow: 2px 6px 0 #344a6f;
+}
+
+#nextButton:active{
+    transform: scale(1.2);
+    background-color:#FAD880;
+    color:#486EAD;
+}
