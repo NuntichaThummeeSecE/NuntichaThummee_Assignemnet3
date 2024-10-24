@@ -20,4 +20,5 @@ ChatGPT: generating content for the questions and answers
 Access GitHub: Go to: https://github.com/NuntichaThummeeSecE/NuntichaThummee_Assignemnet3
 Clone or download the project.
 Open the main.html file in your web browser.
+
 Add password 111111 to access the quiz
