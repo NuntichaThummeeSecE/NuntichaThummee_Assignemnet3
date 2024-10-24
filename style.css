@@ -19,7 +19,8 @@ body {
 }
 
 /* style card */
-#questionContainer {
+#questionContainer,
+#login {
     background-color: #F094B4;
     opacity: 90%;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
@@ -33,7 +34,7 @@ body {
     padding: 2%;
 }
 
-#question{
+#question {
     margin: 5%;
     margin-top: 2%;
 }
@@ -56,9 +57,17 @@ body {
     padding: 2%;
     margin: 2%;
     width: 80%;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
 }
 
-#nextButton {
+.choiceButton:hover{
+    background-color: #FAD880;
+    color: #96A7DB;
+}
+
+#nextButton,
+#loginButton {
     background-color: #FAD880;
     color: #96A7DB;
     border: none;
@@ -70,22 +79,65 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
 }
 
 /* style color when click on correct answer */
 .correct {
     background-color: #A8FFBB;
+    color: white;
 }
 
 /* style color when click on wrong answer */
 .wrong {
     background-color: #CE0D10;
+    color: white;
 }
 
-h3{
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 39px;
-  color: #486EAD;
+h3,
+label {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 39px;
+    color: #486EAD;
 }
+
+label {
+    margin: 2%;
+}
+
+#typeBox {
+    text-align: center;
+    margin: 2%;
+    border-radius: 20px;
+    border-style: none;
+    padding: 2%;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+}
+
+#loginButton {
+    margin: 2%;
+    max-width: 80px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 2px 4px 0 #aa9560;
+    transition: transform 0.2s;
+}
+
+#loginButton:hover {
+    background-color: #486EAD;
+    color: #FAD880;
+    box-shadow: 2px 6px 0 #344a6f;
+}
+
+#loginButton:active {
+    transform: scale(1.2);
+    background-color:#FAD880;
+    color:#486EAD;
+}
+
