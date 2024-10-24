@@ -68,7 +68,7 @@ loginButton.addEventListener ("click",() => {
         alert("login successful");
         document.getElementById("login").style.display = "none";
         document.getElementById("questionContainer").style.display = "block";
-        startQuiz();
+        start();
     } else {
         alert("try agian");
     }
