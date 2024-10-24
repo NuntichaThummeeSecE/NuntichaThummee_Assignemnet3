@@ -77,7 +77,7 @@ const showQuestion = () => {
         button.textContent = choice.text;
         button.onclick = () => selectAnswer(index);
         answerButton.appendChild(button);
-        if(choice.correct){
+        if (choice.correct) {
             button.dataset.correct = choice.correct;
         }
         button.addEventListener("click", selectAnswer);
@@ -86,20 +86,26 @@ const showQuestion = () => {
 
 const reset = () => {
     nextButton.style.display = "none";
-    while(answerButton.firstChild){
+    while (answerButton.firstChild) {
         answerButton.removeChild(answerButton.firstChild);
     }
 }
 
 const selectAnswer = (e) => {
     const selectedButton = e.target;
-    const correctChoice = selectedButton.dataset.correct === "true" ;
-    if(correctChoice){
+    const correctChoice = selectedButton.dataset.correct === "true";
+    if (correctChoice) {
         selectedButton.classList.add("correct");
         score++;
-    }else{
+    } else {
         selectedButton.classList.add("wrong")
     }
+
+    //disabled other answers when already clicked one of them//
+    const buttons = answerButton.querySelectorAll(".choiceButton");
+    buttons.forEach(button => {
+        button.disabled = true; 
+    });
 
     nextButton.style.display = "block"; //show next button after choose the answer//
 }
@@ -108,7 +114,7 @@ nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
         showQuestion();
-    }else{
+    } else {
         scoreResult();
     }
 });
@@ -116,7 +122,7 @@ nextButton.addEventListener("click", () => {
 
 const scoreResult = () => {
     reset();
-    questionElement.innerHTML = `Your score is ${score} `; 
+    questionElement.innerHTML = `Your score is ${score} `;
     nextButton.style.display = "none";
 };
 
