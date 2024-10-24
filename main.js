@@ -59,8 +59,8 @@ let score = 0;
 
 //add event when click login --- if type 111111 and click, user can start the quiz. If not tye again//
 loginButton.addEventListener("click", () => {
-    const enteredPassword = passwordInput.value;
-    if (enteredPassword === correctPassword) {
+    const enteredPassword = passwordInput.value; //get input from user//
+    if (enteredPassword === correctPassword) { //check password//
         isAuthenticated = true;
         alert("login successful");
         document.getElementById("login").style.display = "none"; //hide login section when login successful//
@@ -99,48 +99,49 @@ const showQuestion = () => {
     });
 }
 
+//function reset card//
 const reset = () => {
-    nextButton.style.display = "none";
-    while (answerButton.firstChild) {
+    nextButton.style.display = "none"; //hide next button//
+    while (answerButton.firstChild) { //remove early button//
         answerButton.removeChild(answerButton.firstChild);
     }
 }
 
+//function check answer//
 const selectAnswer = (e) => {
-    const selectedButton = e.target;
-    const correctChoice = selectedButton.dataset.correct === "true";
-    if (correctChoice) {
-        selectedButton.classList.add("correct");
-        score++;
+    const selectedButton = e.target; //reciveed clicked button//
+    const correctChoice = selectedButton.dataset.correct === "true"; //check data//
+    if (correctChoice) { //if correct answer//
+        selectedButton.classList.add("correct"); //add class as correct --> stling in css//
+        score++;//add score//
     } else {
-        selectedButton.classList.add("wrong")
+        selectedButton.classList.add("wrong") //add class as wrong --> stling in css//
     }
 
     //disabled other answers when already clicked one of them//
     const buttons = answerButton.querySelectorAll(".choiceButton");
     buttons.forEach(button => {
-        button.disabled = true;
+        button.disabled = true;//disable all button choices//
     });
 
     nextButton.style.display = "block"; //show next button after choose the answer//
 }
 
+//function display next question when click at next button//
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-        showQuestion();
+    if (currentQuestionIndex < questions.length) {//check that still have question or not//
+        showQuestion(); //display next question//
     } else {
-        scoreResult();
+        scoreResult(); //display sore//
     }
 });
 
+//function display score//
 const scoreResult = () => {
     reset();
-    questionElement.innerHTML = `Your score is ${score} `;
-    nextButton.style.display = "none";
-
-    scoreContainer.style.display = "flex";
-    scoreContainer.style.justifyContent = "center";
+    questionElement.innerHTML = `Your score is ${score} `; //display score//
+    nextButton.style.display = "none"; //hide next button//
 };
 
-document.getElementById("questionContainer").style.display = "none";
+document.getElementById("questionContainer").style.display = "none"; //hide questionContainer//
