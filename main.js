@@ -77,14 +77,27 @@ const showQuestion = () => {
         button.textContent = choice.text;
         button.onclick = () => selectAnswer(index);
         answerButton.appendChild(button);
+        if(choice.correct){
+            button.dataset.correct = choice.correct;
+        }
+        button.addEventListener("click", selectAnswer);
     });
 }
-
 
 const reset = () => {
     nextButton.style.display = "none";
     while(answerButton.firstChild){
         answerButton.removeChild(answerButton.firstChild);
+    }
+}
+
+function selectAnswer(e){
+    const selectedButton = e.target;
+    const correctChoice = selectedButton.dataset.correct === "true" ;
+    if(correctChoice){
+        selectedButton.classList.add("correct");
+    }else{
+        selectedButton.classList.add("wrong")
     }
 }
 

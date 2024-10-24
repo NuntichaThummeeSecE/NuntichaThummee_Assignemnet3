@@ -61,3 +61,13 @@ body {
     padding-right: 1px;
     margin: 2%;
 }
+
+/* style color when click on correct answer */
+.correct{
+    background-color: green;
+}
+
+/* style color when click on wrong answer */
+.wrong{
+    background-color: red;
+}
