@@ -53,10 +53,26 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("choices");
 const nextButton = document.getElementById("nextButton");
+const loginButton = document.getElementById("loginButton");
+const passwordInput = document.getElementById("typeBox");
+const correctPassword = "111111";
 
 //use let because it will change//
 let currentQuestionIndex = 0;
 let score = 0;
+
+loginButton.addEventListener ("click",() => {
+    const enteredPassword = passwordInput.value;
+    if (enteredPassword === correctPassword) {
+        isAuthenticated = true;
+        alert("login successful");
+        document.getElementById("login").style.display = "none";
+        document.getElementById("questionContainer").style.display = "block";
+        startQuiz();
+    } else {
+        alert("try agian");
+    }
+});
 
 //function start with index 0 and 0 score//
 const start = () => {
@@ -119,11 +135,10 @@ nextButton.addEventListener("click", () => {
     }
 });
 
-
 const scoreResult = () => {
     reset();
     questionElement.innerHTML = `Your score is ${score} `;
     nextButton.style.display = "none";
 };
 
-start();
+document.getElementById("questionContainer").style.display = "none";
