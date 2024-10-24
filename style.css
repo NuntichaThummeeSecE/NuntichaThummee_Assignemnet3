@@ -19,7 +19,7 @@ body {
 }
 
 /* style card */
-.card {
+#questionContainer {
     background-color: #F094B4;
     opacity: 90%;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
@@ -29,45 +29,53 @@ body {
     margin-bottom: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+}
+
+#question{
+    text-align: center;
 }
 
 /* style choices container */
-#choices{
+#choices {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 /* style choices button */
-.choiceButton{
+.choiceButton {
     background-color: #96A7DB;
-    color: #FAD880; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
+    color: #FAD880;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     padding: 2%;
     margin: 2%;
+    width: 80%;
 }
 
-#nextButton{
+#nextButton {
     background-color: #FAD880;
-    color:#96A7DB; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
+    color: #96A7DB;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     padding: 2%;
-    padding-left: 1px;
-    padding-right: 1px;
-    margin: 2%;
+    display: block;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
 /* style color when click on correct answer */
-.correct{
-    background-color: green;
+.correct {
+    background-color: #A8FFBB;
 }
 
 /* style color when click on wrong answer */
-.wrong{
-    background-color: red;
+.wrong {
+    background-color: #CE0D10;
 }
